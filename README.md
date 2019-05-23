@@ -1,12 +1,10 @@
-# 保险项目前端
+# vue-typescript-packages
 采用 vue + vue-router + webpack + typescript + axios
 
 ## 规范
 ### ts、tsx
 采用 tslint 规范，并使用 prettier 格式化代码。
 
-### git message
-使用 commitlint。
 
 ## 前言
 
