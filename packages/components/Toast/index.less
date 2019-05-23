@@ -1,0 +1,46 @@
+.toast{
+  &-box{
+    position: fixed;
+    top: 0 ;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  &-content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    min-width: 1.2rem;
+    border-radius: 4px;
+    color: #fff;
+    background-color: rgba(58, 58, 58, 0.9);
+    padding: 10px 17px;
+    text-align: center;
+    line-height: 20px;
+    &_loading{
+      padding: 10px 12px;
+      line-height: inherit;
+    }
+  }
+  &-loading{
+    display: inline-block;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #fff #fff transparent;
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+  }
+}
+
+@keyframes loading{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}

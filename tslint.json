@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "no-unused-expression": false,
+    "ordered-imports": false,
+    "curly": [true, "ignore-same-line"],
+    "variable-name": false
+  }
+}
