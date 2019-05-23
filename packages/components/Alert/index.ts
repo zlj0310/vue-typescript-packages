@@ -14,16 +14,16 @@ export class Alert {
 
 const addDom = (option= {} as any) => {
   const {
-    alertClose= false,
-    title= '',
-    type= 'alert',
-    content= '',
-    closeText= '关 闭',
-    onClose= () => {},
-    cancelText= '取 消',
-    okText= '确 定',
-    onOk= () => {},
-    onCancel= () => {},
+    alertClose= false, // 右上角是否有关闭按钮
+    title= '',   // 弹窗标题
+    type= 'alert',  // confirm-确认框  alert-提示框
+    content= '',  // 弹窗内容
+    closeText= '关 闭',  // 提示框文案
+    onClose= () => {},  // 提示框关闭按钮事件
+    cancelText= '取 消',  // 确认框取消按钮文案
+    onCancel= () => {},  // 确认框关闭按钮事件
+    okText= '确 定',   // 确认框确定按钮文案
+    onOk= () => {},  // 确认框确认按钮事件
   } = option
   removeDom(false)
   const alertEle = document.createElement('div');
@@ -33,7 +33,7 @@ const addDom = (option= {} as any) => {
     `<div>
       <div class="alert-mask"></div>
       <div class="alert-wrapper">
-        ${alertClose && `<em class="icon-close"></em>`}
+        ${alertClose ? `<em class="icon-close"></em>` : ''}
         <h3>${title}</h3>
         <div class="alert-content">
           ${content}
